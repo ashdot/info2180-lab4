@@ -11,8 +11,6 @@ function searchbtn() {
     .catch(error => {
         alert(error)
     });
-   
-    
 
   };
   
