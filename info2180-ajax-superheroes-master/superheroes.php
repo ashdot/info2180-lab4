@@ -71,18 +71,18 @@ $superheroes = [
 <?php endforeach; ?>
 </ul> 
 
+
+
 <?php 
 
-$found = false
-foreach ($superheroes as $superhero){
-    //if (strcasecmp($superhero['alias'],query) === 0 || strcasecmp($superhero['alias'],query) === 0)
-    //{
+
+
+foreach ($superheroes as $superhero){  
     echo "<h3>{$superhero['alias']}</h3>";
     echo "<h4> A.K.A {$superhero['name']}</h4>";
     echo "<p>{$superhero['biography']}</p>";
-    $found = true 
-    //}
-}
+
+    }
 
 ?>
 

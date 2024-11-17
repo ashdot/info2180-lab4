@@ -2,16 +2,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     //let result = document.getElementById("result")
+
+    //const query = document.getElementById("super-search").value;
  
 
 function searchbtn() { 
 
-    const query = document.getElementById("super-search").value;
-    console.log(input)
-
-    let url = 'http://localhost:8888/info2180-lab4/info2180-ajax-superheroes-master/superheroes.php'
-
-    fetch('http://localhost:8888/info2180-lab4/info2180-ajax-superheroes-master/superheroes.php')
+    let query = document.getElementById('super-search').value.trim();
+    let url = `http://localhost:8888/info2180-lab4/info2180-ajax-superheroes-master/superheroes.php?query=${encodeURIComponent(query)}`;
+    fetch(url)
     .then(response => response.text())
     .then(data=> {
         console.log(data)
@@ -25,7 +24,6 @@ function searchbtn() {
   }; 
 
   
-
 
   
   document.getElementById("Search").addEventListener("click", searchbtn);
