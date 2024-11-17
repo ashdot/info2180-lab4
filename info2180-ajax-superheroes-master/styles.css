@@ -19,6 +19,12 @@ header > h1 {
 
 }
 
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
 #super-search {
     align-self: center;
     width: 95%;
