@@ -79,14 +79,14 @@ if ($query){
     
         foreach ($superheroes as $superhero){ 
             if ((strcasecmp($superhero['alias'],$query)===0)||(strcasecmp($superhero['name'],$query)===0)){
-            echo "<h3>{$superhero['alias']}</h3>";
-            echo "<h4> A.K.A {$superhero['name']}</h4>";
+            echo strtoupper("<h3>{$superhero['alias']}</h3>");
+            echo strtoupper("<h4> A.K.A {$superhero['name']}</h4>");
             echo "<p>{$superhero['biography']}</p>";
             $search_found = true;
             break;
             } 
         }
-    if($search_found){
+    if(!$search_found){
         echo "<p>Superhero not found </p>";
     }
 
